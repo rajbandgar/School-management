@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "tremad-schools",
+  "private_key_id": "7478b259ed2dbbf3baec3f441f6e1fba5f749eef",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHIExFNdreOQxk\noG/3Q437Je/SwI6ZNWK6/eTXFNjKQWSrOua3dyFON19v6OeFKDc7CIe1TRViZ5lY\nlr4eLMgvS08uNoo0UBk8wXCCX7n41fOrurt6GAZxThEgotGRIul8HdwiK52/Pao4\nAaaqycxeFItPb0NizKI7hD0Gq8nqjjHZ4YqlQoTvNEwKMiOaRmSr7+xMaFOLKwLe\nzyahuN222kgJhDZSLDhGmxGPe+uGc+vKkexNOk0xZtWvy6kzSyF1W5HItRHJrygT\nuS7UdPr9hQh5wzzh+6CwsEUvlS88EDMbHWl/AXPUxMaF2K0dr4OJLGAg6Rrz5xDl\nL1Atj6BtAgMBAAECggEABZENemMJIjlvc1t/opnX9pBQb7bw8mKC+iqn3F7/7Ba/\nTpqGbm5dPX3TZEibOrM6aNZe6NgY6j47YLXrs0jZzcyp3LP30bX3ID/Huk7pXx+O\ndAINd9o2r+TLs/rC2tWIuAhwdq1IEY6sdNIpZR15rs83N8cqyv1g5nYJ0k2e7VIn\nF0QymMktixeddHJmuhHk6QdR3by8ryfVhBFWIEBvMuHB2IQPz99HiVjwRpyl0U9P\nQAAujURhGpT/Gi8rlQJfRIlQvpyU06IS3SZK0uWRS3vz5+7p2bj5y+MR2L0f3enJ\nMtjAeX7+L3BW/Ld/ehE62D/ubS3os2wZ8AuHOBJBNwKBgQDk5mqM1FvmqyOtLu2Y\nC5w2VBepHIL8J1tXK4wU56Mgz8PYVG4WZ6bPKbjX5V8duy+HbBumNV2tuMZVI0mE\nn2Ivpfon14oVarStZ0RtqXY3wHybb+YaxrfKs8oSig4RG7CwfumaVO6N5FkuyveD\nLMB8wMdUOnXG8GL8gJkRa3aOcwKBgQDes3vfieveNe4WKeLdApibEGykkjlCqz0j\ns0+BkZi6YqEg/K7m5r/mh/LWAHLYgNfMmz2CC294OfGhvM2S9CJ5iv+z+z0lOeTZ\nb39ymV6QHijqJB3NfqbKT8csSaUor09T6GBWnL24nsIjVzZCsTc5Nt5u/ter25vP\nvKZVSGV9nwKBgQDe8QkAJ2lnLnKuH9Hr0AsS4y60WH+/Rjnxmgly5vV8ZL+0OO+M\nROI0TceqB85vb7xoIsR/SuT16czKaXcWhAImtHsESStFlstpRPZh9LaesIzs+7zb\ngYbLF/eNvQbcZOLf1IyD84rximHOcINIMNM97ql2AQZrgAB5PGtZixhKvwKBgQCd\nyYmA7pWh0ZApP/AvK0G4zEBNshTD+dPN0aQJZ4FQvcTwPFgn3WImEjiqC5NTdqZv\nn6ZK15NZGaTsNXtqHXO3rhZSDTZbg9Nzg55HMgdgER5oFsLO8Gd4fGHgLSXJ17xa\n9RAdDd0WS9W9eHNHeYxpC0k6V3GzoFubKkynrC3MfQKBgFllj7H8E4AqHb0QGaU6\nt0zcUP9tI+G5iDLz/Yp728cve34NoO+c3ic6Or7FI6T+h9J2ykqECgki1ojjaPmk\n44hPrW8yHmyvdRJwsqwbzdGI0fISWZxFcFfqHNf0qPnZQQvGvGtYA8c17vc3/OC8\n3f5kmCOlvqKdIO8r1718R2S0\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@tremad-schools.iam.gserviceaccount.com",
+  "client_id": "106411117319090815316",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40tremad-schools.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

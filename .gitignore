@@ -1,0 +1,85 @@
+# ===============================
+# GENERAL
+# ===============================
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+
+# ===============================
+# PYTHON / FASTAPI
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Migrations cache
+alembic/versions/__pycache__/
+
+# ===============================
+# NODE / REACT
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Vite
+.vite/
+
+# ===============================
+# FIREBASE
+# ===============================
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# ===============================
+# IDE / EDITORS
+# ===============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===============================
+# OS
+# ===============================
+Desktop.ini
+
+# ===============================
+# DATABASE
+# ===============================
+*.sqlite3
+*.db
+*.sql
+
+# ===============================
+# MEDIA / UPLOADS
+# ===============================
+uploads/
+media/
