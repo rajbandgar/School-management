@@ -33,7 +33,7 @@ const OTPVerifyPage = () => {
 
       // 2️⃣ Exchange Firebase token for backend JWT
       const res = await axios.post(
-        "http://localhost:8000/auth/firebase-login",
+        "https://school-management-3-3awh.onrender.com/auth/firebase-login",
         {
           firebase_token: firebaseIdToken,
         }

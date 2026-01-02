@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline"
 import { Link } from "react-router-dom"
 import api from "../../services/api" // axios instance
-import { Link } from "react-router-dom"
+
 
 const StudentDashboard = () => {
   const [students, setStudents] = useState([])
