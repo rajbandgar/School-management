@@ -49,3 +49,4 @@ pydantic-settings==2.4.0
 # Utilities
 # -----------------------------
 
+phonenumbers
