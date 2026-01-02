@@ -65,8 +65,16 @@ def firebase_login(
         raise HTTPException(401, "Invalid Firebase token")
 
     user = db.query(User).filter(User.phone == phone).first()
-    if not user:
-        raise HTTPException(403, "User not registered")
+     if not user:
+            
+        user = User(
+            phone=phone,
+            role="ADMIN",   # or default role
+            status="active"
+        )
+        db.add(user)
+        db.commit()
+        db.refresh(user)
 
     access_token = create_access_token({
         "user_id": str(user.id),
