@@ -1,6 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
 from uuid import UUID
+from sqlalchemy import select
+
 
 from app.core.database import get_db
 from app.core.dependency import require_roles, Role
@@ -13,6 +15,7 @@ from app.schemas.principal import PrincipalCreate, PrincipalUpdate, PrincipalRes
 from app.services.principal_service import (
     create_principal, get_principal, get_all_principals, update_principal, delete_principal
 )
+from app.models.principal import Principal
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
 
@@ -66,24 +69,40 @@ def get_principal_endpoint(
 
 
 @router.put("/principals/{principal_id}", response_model=PrincipalResponse)
-def update_principal_endpoint(
-    principal_id: UUID,
+def update_principal_route(
+    principal_id: str,
     principal_data: PrincipalUpdate,
-    current_user: User = Depends(admin_only),
     db: Session = Depends(get_db)
 ):
-    principal = update_principal(principal_id, principal_data, current_user, db)
+
+    # Fetch the existing principal (even if soft-deleted)
+    result = db.execute(select(Principal).where(Principal.id == principal_id))
+    principal = result.scalar_one_or_none()
+
     if not principal:
         raise HTTPException(status_code=404, detail="Principal not found")
+
+    # Partial update (only update fields provided)
+    update_data = principal_data.dict(exclude_unset=True)
+    for key, value in update_data.items():
+        setattr(principal, key, value)
+
+    db.commit()
+    db.refresh(principal)
+
     return principal
 
 
 @router.delete("/principals/{principal_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_principal_endpoint(
-    principal_id: UUID,
-    current_user: User = Depends(admin_only),
-    db: Session = Depends(get_db)
-):
-    success = delete_principal(principal_id, current_user, db)
-    if not success:
+def delete_principal_route(principal_id: str, db: Session = Depends(get_db)):
+
+    result = db.execute(select(Principal).where(Principal.id == principal_id))
+    principal = result.scalar_one_or_none()
+
+    if not principal:
         raise HTTPException(status_code=404, detail="Principal not found")
+
+    db.delete(principal)
+    db.commit()
+
+    return {"message": "Principal deleted successfully"}

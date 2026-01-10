@@ -13,7 +13,7 @@ class PrincipalCreate(BaseModel):
     email: Optional[str] = None
     date_of_birth: Optional[date] = None
     qualification: Optional[str] = None
-    experience_years: Optional[str] = None
+    experience_years: Optional[int] = None
     joining_date: Optional[date] = None
 
 
@@ -23,7 +23,7 @@ class PrincipalUpdate(BaseModel):
     email: Optional[str] = None
     date_of_birth: Optional[date] = None
     qualification: Optional[str] = None
-    experience_years: Optional[str] = None
+    experience_years: Optional[int] = None
     joining_date: Optional[date] = None
 
 

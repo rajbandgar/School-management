@@ -62,11 +62,12 @@ def get_principal(
 ) -> Optional[Principal]:
     result = db.execute(
         select(Principal).where(
-            Principal.id == principal_id,
-            Principal.status != "soft_deleted"
+            Principal.user_id == principal_id,
+            
         )
     )
     return result.scalar_one_or_none()
+
 
 
 # =========================
@@ -131,7 +132,7 @@ def update_principal(
 # =========================
 def delete_principal(
     principal_id: UUID,
-    current_user: User,
+    
     db: Session
 ) -> bool:
 
@@ -140,6 +141,6 @@ def delete_principal(
         return False
 
     principal.status = "soft_deleted"
-    principal.updated_by = current_user.id
+   
     db.commit()
     return True

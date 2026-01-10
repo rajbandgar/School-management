@@ -49,3 +49,7 @@ pydantic-settings==2.4.0
 # Utilities
 # -----------------------------
 
+<<<<<<< HEAD
+=======
+phonenumbers
+>>>>>>> 6f106595d9bbe0a8d482f8ecd786542d6a33f553

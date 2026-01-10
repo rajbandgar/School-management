@@ -9,6 +9,7 @@ import {
   ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline"
 import api from "../../services/api"
+import { Link } from "react-router-dom"
 
 
 
@@ -21,7 +22,7 @@ const PrincipalManagement = () => {
     first_name: "",
     last_name: "",
     email: "",
-    contact_number: "",
+    phone: "",
     emergency_contact: "",
     qualification: "",
     experience_years: "",
@@ -70,7 +71,7 @@ const PrincipalManagement = () => {
         first_name: "",
         last_name: "",
         email: "",
-        contact_number: "",
+        phone: "",
         emergency_contact: "",
         qualification: "",
         experience_years: "",
@@ -166,7 +167,7 @@ const PrincipalManagement = () => {
                   {/* DETAILS */}
                   <div className="space-y-1 text-sm text-gray-700">
                     <p><b>Email:</b> {p.email || "—"}</p>
-                    <p><b>Phone:</b> {p.contact_number || "—"}</p>
+                    <p><b>Phone:</b> {p.phone || "—"}</p>
                     <p><b>Emergency:</b> {p.emergency_contact || "—"}</p>
                     <p><b>Qualification:</b> {p.qualification || "—"}</p>
                     <p><b>Experience:</b> {p.experience_years || 0} yrs</p>
@@ -212,7 +213,7 @@ const PrincipalManagement = () => {
               <Input label="First Name" name="first_name" onChange={handleChange} required />
               <Input label="Last Name" name="last_name" onChange={handleChange} required />
               <Input label="Email" name="email" type="email" onChange={handleChange} />
-              <Input label="Phone" name="contact_number" onChange={handleChange} />
+              <Input label="Phone" name="phone" onChange={handleChange} />
               <Input label="Emergency Contact" name="emergency_contact" onChange={handleChange} />
               <Input label="Qualification" name="qualification" onChange={handleChange} />
               <Input label="Experience (Years)" name="experience_years" type="number" onChange={handleChange} />
